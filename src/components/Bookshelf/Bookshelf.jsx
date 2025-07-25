@@ -30,8 +30,10 @@ return (
 <input type="text" name="author" id="author" value={newBook.author} onChange={handleInputChange} />
 <button>Add</button>
 </form>
+
   </div>
-  <div className="bookCardsDiv">{books.map((book) => (<li key={book.id}>{book.title} by {book.author}</li>))}</div>
+  <div className="bookCardsDiv">
+    {books.map((book) => (<li key={book.id} className="bookCard">{book.title} by {book.author}</li>))}</div>
 </div>
 )
 };
